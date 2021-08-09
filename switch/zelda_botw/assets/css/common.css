@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+	utility
+------------------------------------------------------------*/
+
+.none {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+}
+
+.no-js .hidden {
+    visibility: visible;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 0;
+}
+
+/*------------------------------------------------------------
+	sound
+------------------------------------------------------------*/
+
+#h_sound {
+    position: absolute;
+    bottom: 59px;
+    right: 3px;
+    z-index: 100;
+}
+
+.no-js #h_sound {
+    display: none;
+}
+
+.is-ua-wiiu #h_sound {
+    display: none;
+}
+
+.no-video #h_sound {
+    display: none;
+}
+
+#h_sound dt {
+    float: left;
+    width: 46px;
+    height: 19px;
+    overflow: hidden;
+    background-image: url(../img/common/h_sound.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+#h_sound.pattern04 dt {
+    background-position: 0 -57px;
+}
+
+#h_sound.pattern03 dt {
+    background-position: 0 -38px;
+}
+
+#h_sound.pattern01 dt {
+    background-position: 0 -19px;
+}
+
+#h_sound.pattern02 dt {
+    background-position: 0 0;
+}
+
+#h_sound dd {
+    float: left;
+}
+
+#h_sound .h_sound_off {
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+
+#h_sound.pattern04 .h_sound_off {
+    border-left-color: #787878;
+}
+
+#h_sound.pattern03 .h_sound_off {
+    border-left-color: #ffffff;
+}
+
+#h_sound.pattern01 .h_sound_off {
+    border-left-color: #998338;
+}
+
+#h_sound.pattern02 .h_sound_off {
+    border-left-color: #f9f7dc;
+}
+
+#h_sound dd a {
+    position: relative;
+    display: block;
+    width: 38px;
+    height: 19px;
+    overflow: hidden;
+    background-image: url(../img/common/h_sound.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+#h_sound.pattern04 .h_sound_on a {
+    background-position: 0 -133px;
+}
+
+#h_sound.pattern03 .h_sound_on a {
+    background-position: 0 -114px;
+}
+
+#h_sound.pattern01 .h_sound_on a {
+    background-position: 0 -95px;
+}
+
+#h_sound.pattern02 .h_sound_on a {
+    background-position: 0 -76px;
+}
+
+#h_sound.pattern04 .h_sound_off a {
+    background-position: 0 -209px;
+}
+
+#h_sound.pattern03 .h_sound_off a {
+    background-position: 0 -190px;
+}
+
+#h_sound.pattern01 .h_sound_off a {
+    background-position: 0 -171px;
+}
+
+#h_sound.pattern02 .h_sound_off a {
+    background-position: 0 -152px;
+}
+
+#h_sound dd a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    margin: 0 auto;
+    transition: width 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#h_sound.pattern04 dd a:after {
+    background-color: #787878;
+}
+
+#h_sound.pattern03 dd a:after {
+    background-color: #ffffff;
+}
+
+#h_sound.pattern01 dd a:after {
+    background-color: #998338;
+}
+
+#h_sound.pattern02 dd a:after {
+    background-color: #f9f7dc;
+}
+
+#h_sound .current a:after {
+    width: 19px;
+}
+
+/*------------------------------------------------------------
+	logo
+------------------------------------------------------------*/
+
+.site_logo,
+.logo_switch,
+.logo_wiiu {
+    position: absolute;
+    z-index: 12;
+}
+
+.site_logo {
+    top: 59px;
+    left: 23px;
+}
+
+.logo_switch {
+    right: 0;
+    top: 40px;
+}
+
+.logo_wiiu {
+    right: 87px;
+    top: 57px;
+}
+
+/*------------------------------------------------------------
+	gnav
+------------------------------------------------------------*/
+
+.gnav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 960px;
+    height: 47px;
+    background: url(../img/common/nav_bg_pattern.jpg) center center repeat-x;
+    box-shadow: 0 7px 2px rgba(0, 0, 0, 0.47) inset;
+}
+
+.gnav ul {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.gnav li {
+    float: left;
+}
+
+.gnav li a {
+    display: block;
+    position: relative;
+    width: 137px;
+    height: 47px;
+}
+
+.gnav li a span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gnav li.new a span:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 26px;
+    height: 14px;
+    margin-top: -11px;
+    background: url(../img/common/icon_new.png) 0 0 no-repeat;
+}
+
+.gnav li:nth-child(3).new a span:before {
+    left: 5px;
+}
+
+.gnav li:nth-child(4).new a span:before {
+    left: 29px;
+}
+
+.gnav li:nth-child(5).new a span:before {
+    left: 10px;
+}
+
+.gnav li:nth-child(6).new a span:before {
+    left: 34px;
+}
+
+.gnav li.new a span img {
+    margin-left: 16px;
+}
+
+.gnav li.current a .normal,
+.gnav li a .hover {
+    opacity: 0;
+}
+
+.gnav li.current a .hover {
+    opacity: 1;
+}
+
+.gnav li a:before,
+.gnav li a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+}
+
+.gnav li a:before {
+    left: -26px;
+    width: 189px;
+    height: 24px;
+    background: url(../img/common/nav_bg_hover.png) 0 0 no-repeat;
+    opacity: 0;
+}
+
+.gnav li.current a:before {
+    opacity: 1;
+}
+
+.gnav li a:after {
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #00a3db;
+    box-shadow: 0 7px 2px rgba(0, 0, 0, 0.47) inset;
+}
+
+.gnav li.current a:after {
+    width: 100%;
+}
+
+/*------------------------------------------------------------
+	hover
+------------------------------------------------------------*/
+
+.no-touchevents #h_sound dd a,
+.no-touchevents .banner_tvcm_1day a {
+    transition: opacity 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.no-touchevents #h_sound dd:not(.current) a:hover,
+.no-touchevents .banner_tvcm_1day a:hover {
+    opacity: 0.7 !important;
+}
+
+.no-touchevents .gnav li a span,
+.no-touchevents .gnav li a:before {
+    transition: opacity 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.no-touchevents .gnav li a:hover .normal {
+    opacity: 0;
+}
+
+.no-touchevents .gnav li a:hover .hover,
+.no-touchevents .gnav li a:hover:before {
+    opacity: 1;
+}
+
+.no-touchevents .gnav li a:after {
+    transition: width 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.no-touchevents .gnav li a:hover:after {
+    width: 100%;
+}

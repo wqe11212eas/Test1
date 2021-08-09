@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+  layout
+------------------------------------------------------------*/
+
+html {
+    overflow-y: auto;
+    background-color: #000000;
+}
+
+html,
+body {
+    background-color: #000000;
+}
+
+#wrapper {
+    min-width: 960px;
+    min-height: 680px;
+    background-color: #000000;
+}
+
+#modal {
+    z-index: 9999;
+    background-color: transparent;
+}
+
+.video_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video_wrap>div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video_wrap video,
+.video_wrap .ytvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.video_wrap .ytvideo iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.video_wrap>div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vjs-hidden {
+    display: none;
+}
+
+/*------------------------------------------------------------
+    gnav
+------------------------------------------------------------*/
+
+.gnav,
+#h_sound {
+    position: fixed;
+}
+
+/*------------------------------------------------------------
+	movie_page
+------------------------------------------------------------*/
+
+#movie_page {
+    padding-bottom: 90px;
+}
+
+.movie_title {
+    position: relative;
+    margin-bottom: 53px;
+    padding-top: 138px;
+    text-align: center;
+}
+
+.movie_thumb_list {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.movie_thumb_list li {
+    display: inline-block;
+    width: 240px;
+    margin-bottom: 40px;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+.movie_thumb_list li:nth-child(9n) {
+    margin-right: 0;
+}
+
+.movie_thumb_list li a {
+    text-decoration: none;
+}
+
+.movie_thumb_list li .img {
+    line-height: 1;
+}
+
+.movie_thumb_list li .img img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.movie_thumb_list li .text {
+    position: relative;
+    text-align: center;
+}
+
+.movie_thumb_list li.new .text:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    width: 26px;
+    height: 14px;
+    background: url(../img/common/icon_new.png) 0 0 no-repeat;
+}
+
+/*------------------------------------------------------------
+  movie modal
+------------------------------------------------------------*/
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-aspect-ratio: 16/7) {
+    #modal {
+        position: absolute;
+        height: 880px;
+    }
+}
+
+.modal_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(../img/common/modal_bg.png) center center repeat;
+    text-indent: -9999px;
+}
+
+.modal_window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1200px;
+    height: 675px;
+    margin: -338px 0 0 -600px;
+}
+
+.showmovie .modal_window {
+    left: 0;
+    width: 100%;
+    height: 0;
+    margin-top: -26%;
+    margin-left: 0;
+    padding-top: 56.25%;
+}
+
+@media screen and (max-width: 1578px) {
+    .modal_window {
+        width: 76%;
+        height: 0;
+        max-width: 1200px;
+        padding-top: 42.75%;
+        margin: -21.375% 0 0 -38%;
+    }
+    .showmovie .modal_window {
+        max-width: 100%;
+    }
+    .is-ua-wiiu .modal_window {
+        padding-top: 0;
+        height: 260px;
+        width: 600px;
+        margin: -150px 0 0 -300px;
+        left: 50%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/11) {
+    .showmovie .modal_window {
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        margin-top: -22%;
+        margin-left: -40%;
+        padding-top: 45%;
+    }
+}
+
+.modal_btn_close {
+    display: block;
+    position: absolute;
+    top: -52px;
+    right: 0;
+    width: 38px;
+    height: 39px;
+    overflow: hidden;
+}
+
+.showmovie .modal_btn_close {
+    right: 15px;
+}
+
+@media screen and (min-aspect-ratio: 16/11) {
+    .showmovie .modal_btn_close {
+        right: 0;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+    .modal_btn_close,
+    .showmovie .modal_btn_close {
+        top: 0;
+        right: -60px;
+        z-index: 100;
+    }
+    .is-ua-wiiu .modal_btn_close {
+        top: 0;
+    }
+}
+
+.modal_btn_close a {
+    display: block;
+    height: 100%;
+    background: url(../img/common/modal_btn_close.png) 0 0 no-repeat;
+    text-indent: -9999px;
+    outline: none;
+}
+
+.modal_contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+}
+
+.showmovie .modal_contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+}
+
+@media screen and (min-aspect-ratio: 16/11) {
+    .showmovie .modal_contents {
+        height: 100%;
+        padding-top: 0;
+    }
+    .is-ua-wiiu .modal_contents {
+        padding-top: 0;
+        height: 340px;
+        width: 600px;
+        margin: 0 0 0 -300px;
+        top: 0;
+        left: 50%;
+    }
+}
+
+.modal_contents img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.modal_contents iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal_contents.loading:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video_wrap .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.video_wrap .slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*------------------------------------------------------------
+  hover
+------------------------------------------------------------*/
+
+.no-touchevents .movie_thumb_list li a .img {
+    background-color: #ffffff;
+}
+
+.no-touchevents .movie_thumb_list li a .img img {
+    transition: opacity 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.no-touchevents .movie_thumb_list li a:hover .img img {
+    opacity: 0.7;
+}

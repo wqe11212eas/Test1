@@ -1,0 +1,481 @@
+@charset "UTF-8";
+/*------------------------------------------------------------
+	layout
+------------------------------------------------------------*/
+
+html {
+    overflow-y: scroll;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 960px;
+    height: 100%;
+    min-height: 680px;
+    background-color: #000000;
+}
+
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#modal {
+    z-index: 15000;
+    background-color: transparent;
+}
+
+.video_wrap {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 40px;
+}
+
+.video_wrap>div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video_wrap video,
+.video_wrap .ytvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.video_wrap .ytvideo iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.video_wrap>div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vjs-hidden {
+    display: none;
+}
+
+/*------------------------------------------------------------
+	sound
+------------------------------------------------------------*/
+
+#h_sound {
+    right: auto;
+    bottom: auto;
+    top: 58px;
+    left: 15px;
+    z-index: 310;
+}
+
+/*------------------------------------------------------------
+	loading
+------------------------------------------------------------*/
+
+#loading {
+    z-index: 10;
+    background-color: #000;
+}
+
+.loading_bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -450px 0 0 -720px;
+    background: #000 url(../img/top/loading_bg.jpg) top center no-repeat;
+}
+
+.loading_bg div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/top/loading_bg_light.jpg) top center no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+
+.loading_bg img {
+    display: block;
+    opacity: 0;
+}
+
+.loading_text_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 458px;
+    height: 168px;
+    margin: -85px 0 0 -229px;
+}
+
+.loading_text_box div,
+.loading_text_box p {
+    position: absolute;
+}
+
+.loading_img {
+    background-image: url(../img/top/loading_img.png);
+    top: -36px;
+    left: 133px;
+}
+
+.loading_img img {
+    display: block;
+    opacity: 0;
+}
+
+.loaded_img {
+    background-image: url(../img/top/loaded_img.png);
+    top: -36px;
+    left: 133px;
+    opacity: 0;
+}
+
+.loaded_img img {
+    display: block;
+    opacity: 0;
+}
+
+.loading_attention {
+    top: 131px;
+    left: 80px;
+}
+
+.is-ua-wiiu .loading_attention {
+    display: none;
+}
+
+.loading_text {
+    top: 70px;
+    left: 99px;
+    opacity: 0;
+}
+
+.loading_bar_box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+}
+
+.loading_bar {
+    width: 0%;
+    height: 3px;
+    overflow: hidden;
+    background-color: #da8403;
+    text-indent: -9999px;
+    transition: width 200ms linear;
+    -webkit-transition: width 200ms linear;
+}
+
+/*------------------------------------------------------------
+	introduction
+------------------------------------------------------------*/
+
+.no-video #introduction .video_wrap div {
+    background: url(../../sp/assets/img/top/top_bg_0600.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/*------------------------------------------------------------
+	top
+------------------------------------------------------------*/
+
+#top h1,
+#top p,
+#top .video_wrap .slide,
+#top .video_wrap .slide img,
+.top_text_box,
+.top_logo img,
+.top_logo div {
+    position: absolute;
+}
+
+#top .video_wrap,
+.logo_wiiu,
+.logo_switch,
+.top_logo,
+.top_info_date {
+    opacity: 0;
+}
+
+#top .video_wrap {
+    background: #ffffff;
+}
+
+#top .video_wrap .slide,
+#top .video_wrap .slide img {
+    top: 0;
+    left: 0;
+}
+
+#top .video_wrap .slide {
+    width: 100%;
+    height: 100%;
+}
+
+.top_text_box {
+    top: 50%;
+    left: 50%;
+    width: 960px;
+    height: 600px;
+    margin: -300px 0 0 -480px;
+}
+
+.top_logo {
+    top: 155px;
+    left: 175px;
+    width: 611px;
+    height: 197px;
+}
+
+.is-ua-wiiu .top_logo,
+.touchevents .top_logo {
+    background: url(../img/top/top_logo.png) 0 0 no-repeat;
+}
+
+.top_logo span {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.top_logo div {
+    top: 1px;
+    left: 12px;
+}
+
+.top_info_date {
+    top: 375px;
+    left: 218px;
+}
+
+/* WiiU or tablet */
+
+#top .video_wrap div .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center no-repeat;
+    background-size: cover;
+}
+
+/*------------------------------------------------------------
+	gnav
+------------------------------------------------------------*/
+
+.gnav {
+    bottom: 30px;
+    z-index: 110;
+    opacity: 0;
+}
+
+/*------------------------------------------------------------
+	top_footer
+------------------------------------------------------------*/
+
+.top_footer {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 110;
+    width: 100%;
+    height: 30px;
+}
+
+.top_f_btn_nintendo {
+    top: -2px;
+    left: 13px;
+}
+
+.top_f_btn_switch_software {
+    top: -1px;
+    left: 195px;
+}
+
+.top_f_btn_wiiu_software {
+    top: -1px;
+    left: 326px;
+}
+
+.top_f_copyright {
+    top: 0;
+    left: 50%;
+    margin-left: -56px;
+}
+
+.top_f_update {
+    top: 2px;
+    right: 8px;
+}
+
+.top_f_update.new a:before {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 14px;
+    margin-right: 1px;
+    background: url(../img/common/icon_new.png) 0 0 no-repeat;
+    vertical-align: middle;
+}
+
+.top_f_update.new a img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*.bnr_zeldaportal{
+	position: absolute;
+	right: 6px;
+	bottom: 48px;
+}
+
+.bnr_zeldaportal img{
+	vertical-align: bottom;
+}
+
+.bnr_zeldaportal a{
+	width: 327px;
+	height: 69px;
+	position: relative;
+	display: block;
+}
+
+.bnr_zeldaportal a:after{
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #FFF;
+	opacity: 0;
+}*/
+
+/*------------------------------------------------------------
+	hover
+------------------------------------------------------------*/
+
+.no-touchevents #h_sound dd a,
+.no-touchevents .top_f_btn_nintendo a,
+.no-touchevents .top_f_btn_switch_hardware a,
+.no-touchevents .top_f_btn_switch_software a,
+.no-touchevents .top_f_btn_wiiu_software a,
+.no-touchevents .top_f_update.new a {
+    transition: opacity 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.no-touchevents #h_sound dd:not(.current) a:hover,
+.no-touchevents .top_f_btn_nintendo a:hover,
+.no-touchevents .top_f_btn_switch_hardware a:hover,
+.no-touchevents .top_f_btn_switch_software a:hover,
+.no-touchevents .top_f_btn_wiiu_software a:hover,
+.no-touchevents .top_f_update.new a:hover {
+    opacity: 0.7 !important;
+}
+
+.no-touchevents .bnr_zeldaportal a:after {
+    opacity: 0;
+    transition: opacity 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.no-touchevents .bnr_zeldaportal a:hover:after {
+    opacity: 0.18 !important;
+}
+
+.bnr_zeldaportal {
+    position: absolute;
+    right: 6px;
+    bottom: 55px;
+}
+
+.bnr_zeldaportal img {
+    vertical-align: bottom;
+}
+
+.bnr_zeldaportal a {
+    width: 327px;
+    height: 130px;
+    position: relative;
+    display: block;
+}
+
+.bnr_zeldaportal a:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FFF;
+    opacity: 0;
+}
+
+.bnr_questionnaire {
+    position: absolute;
+    right: 6px;
+    bottom: 190px;
+}
+
+.bnr_zquestionnaire img {
+    vertical-align: bottom;
+}
+
+.bnr_questionnaire a {
+    width: 327px;
+    height: 129px;
+    position: relative;
+    display: block;
+}
+
+.bnr_questionnaire a:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 129px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FFF;
+    opacity: 0;
+}
+
+.icon_award {
+    position: absolute;
+    left: 0;
+    bottom: 48px;
+}
+
+.icon_award img {
+    vertical-align: bottom;
+}
